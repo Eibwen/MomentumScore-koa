@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block title %}MoScore{% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="styles/moscore.css">
+  <script language="javascript" src="scripts/jspark.js"></script>
+{% endblock %}
+
+{% block content %}
+<!--   <ul class="messages">
+    {% for message in messages %}
+      <li class="message">{{ message.message }}</li>
+    {% endfor %}
+  </ul>
+  <form action="/messages" method="post" id="message-form">
+    <textarea placeholder="Insert a message" name="message"
+      onkeydown="if (event.keyCode == 13) document.getElementById('message-form').submit();"></textarea>
+  </form> -->
+  <table>
+  	<thead>
+  		<tr>
+  			{% for key in stockFields %}
+  			<td>{{ key }}</td>
+  			{% endfor %}
+  		</tr>
+  	</thead>
+  	<tbody>
+  		{% for stock in stocks %}
+  		<tr class="tickerRow {{ stock.ticker }}">
+<!--   			{% for field in stockFields %}
+	  		<td>
+	  			{{ stock[field] }}
+	  		</td>
+	  		{% endfor %} -->
+			<td class="tickerSymbol">
+				{{ stock.ticker }}
+			</td>
+			<td>
+				{{ stock.score|percent }}
+			</td>
+			<td>
+				<span class="sparkline">{{ stock.deltas }}</span>
+			</td>
+			<td>
+				{{ stock.name }}
+			</td>
+  		</tr>
+  		{% endfor %}
+  	</tbody>
+  </table>
+{% endblock %}

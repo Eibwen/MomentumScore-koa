@@ -1,0 +1,14 @@
+{
+  "name": "momentum_score",
+  "version": "1.0.0",
+  "description": "A momentum score (https://ycharts.com/support/proprietary_calculations/answer/momentum_score) is a calculated number that predicts future stock/index/mutual fund/etc. performance based upon previous performance. The higher the number, the better. Nobody can predict the future, and you should have diverse investment metrics, but as far as metrics go this is the best one I've used.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gwalker & kbanner",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "fast-csv": "^0.6.0"
+  }
+}
