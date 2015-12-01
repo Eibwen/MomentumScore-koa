@@ -43,7 +43,9 @@ var moscoreWrapperPromise = function (ticker, tickerName) {
 	return new Promise((resolve, reject) => {
 		momentum_score.calculateScore(ticker, (ticker, score, deltas) => {
 			//console.log("sending data to callback");
-			resolve({ ticker: ticker, name: tickerName, score: score, deltas: processDeltaObjects(deltas) })
+			resolve({ ticker: ticker, name: tickerName, score: score,
+                deltas: processDeltaObjects(deltas)
+            })
 		});
 	});
 }

@@ -2,3 +2,7 @@
     display: none;
     width: 60px;
 }
+
+tr[data-favorite='true'] {
+  background-color: #eee;
+}

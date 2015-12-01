@@ -8,7 +8,7 @@ var csv = require("fast-csv");
 // 	Yearly: { momentumPeriodDataPoints: 1, rangeTypeChar: 'y' }
 // }
 
-var momentumPeriodDays = 30;
+var momentumPeriodDays = 30; //approx 21 trading days per calendar month (251 per year)
 /**
  * Most recent first, weight of each segment, the length of this array determines the segments
  */
@@ -80,8 +80,8 @@ exports.calculateScore = function(ticker, momentumScoreCallback) {
 				logIfDebug(valuesToUse);
 				if (valuesToUse.length - 1 != momentumWeighting.length) {
 
-					//console.log("ERROR WITH VALUES: means=");
-					//console.log(means);
+					console.log("ERROR WITH VALUES: means=");
+					console.log(means);
 					console.log("ERROR WITH VALUES: valuesToUse=");
 					console.log(valuesToUse);
 
@@ -293,7 +293,8 @@ function generateUrl(ticker) {
 	//Want 90 days worth of 'trading' so weekdays... so
 	daysRange *= (7/5);
 	//Add another week for the hell of it?
-	daysRange += 5;
+	daysRange += 7;
+	//TODO there is a bug in this stuff due to UTC... running after 6pm on a Monday causes a (daysRange += 5;) to fail to get enough days
 	fromDate.setUTCDate(fromDate.getUTCDate() - daysRange)
 	//console.log("Days back: " + daysRange);
 

@@ -14,7 +14,8 @@ Browse to localhost:3000
 ## TODO
 
 - [ ] Actually build the momentum_score into a npm and import it using that
-- [ ] Make the output easier to read
-- [ ] WANT: ability to tag stocks you own (using local storage for now) and highlight them
+- [ ] Improve the ui... somehow... profit.
+- [ ] Shade color the percentages
+- [x] WANT: ability to tag stocks you own (using local storage for now) and highlight them
 - [ ] Save history to disk, to get a sense of what 'good' and 'bad' values actually mean
 - [ ] Geneate full historical moscore analysis of a stock (and output to graphs, similar to what we have now, but showing the weighting and everything)
