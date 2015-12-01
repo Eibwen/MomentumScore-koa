@@ -1,6 +1,7 @@
 # MomentumScore-koa
 
 This is a metric for stock prices based on https://github.com/kyle-banner/momentum-score and built concurrently (yet disconnected) with https://github.com/kyle-banner/moscore
+
 Original library work here: https://gist.github.com/Eibwen/8fe8e8fca15ddf1fc566
 
 ## Usage
