@@ -42,7 +42,7 @@
 			<td class="tickerSymbol">
 				{{ stock.ticker }}
 			</td>
-			<td>
+			<td style="background-color:{{ stock.score|colorize(minScore, maxScore) }}">
 				{{ stock.score|percent }}
 			</td>
 			<td>

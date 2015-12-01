@@ -13,9 +13,13 @@ Browse to localhost:3000
 
 ## TODO
 
+- [ ] Add a table sorting library (and have percentages  and such support that somehow)
 - [ ] Actually build the momentum_score into a npm and import it using that
 - [ ] Improve the ui... somehow... profit.
-- [ ] Shade color the percentages
+- [x] Shade color the percentages
 - [x] WANT: ability to tag stocks you own (using local storage for now) and highlight them
+- [ ] "Go back in time" set a date to view the status then
 - [ ] Save history to disk, to get a sense of what 'good' and 'bad' values actually mean
 - [ ] Geneate full historical moscore analysis of a stock (and output to graphs, similar to what we have now, but showing the weighting and everything)
+- [ ] Add other metrics to the output
+- [ ] Normalize to an index fund

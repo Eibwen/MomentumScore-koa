@@ -77,7 +77,9 @@ module.exports.home = function *home() {
   
 	this.body = yield render('moscore', {
 		'stocks': stocks,
-		'stockFields': columnLabels
+		'stockFields': columnLabels,
+        'maxScore': stocks[0].score,
+        'minScore': stocks[stocks.length-1].score
 	});
 };
 
