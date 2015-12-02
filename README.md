@@ -23,3 +23,6 @@ Browse to localhost:3000
 - [ ] Geneate full historical moscore analysis of a stock (and output to graphs, similar to what we have now, but showing the weighting and everything)
 - [ ] Add other metrics to the output
 - [ ] Normalize to an index fund
+- [ ] Add custom labels, using localStorage
+- [ ] Support more metrics better
+ - Such as: http://www.investopedia.com/articles/fundamental-analysis/09/five-must-have-metrics-value-investors.asp?layout=infini&v=1B

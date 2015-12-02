@@ -8,7 +8,7 @@ var csv = require("fast-csv");
 // 	Yearly: { momentumPeriodDataPoints: 1, rangeTypeChar: 'y' }
 // }
 
-var momentumPeriodDays = 30; //approx 21 trading days per calendar month (251 per year)
+var momentumPeriodDays = 31; //approx 21 trading days per calendar month (251 per year)
 /**
  * Most recent first, weight of each segment, the length of this array determines the segments
  */
@@ -98,7 +98,7 @@ exports.calculateScore = function(ticker, momentumScoreCallback) {
 
 					// i is OLDER, (i-1) is NEWER... still not sure if this is the correct subtraction...
 					// Difference from MOST_RECENT, to BUCKET[i]
-					var growth = valuesToUse[i].average - valuesToUse[0].average;
+					var growth = valuesToUse[0].average - valuesToUse[i].average;
 					deltas.push(growth);
 					deltaPercents.push(growth / valuesToUse[i].average);
 
@@ -115,6 +115,11 @@ exports.calculateScore = function(ticker, momentumScoreCallback) {
 						thisPeriodClose: valuesToUse[i].average
 					});
 				};
+
+				logIfDebug("===== Deltas Used In MoScore =====");
+				logIfDebug(deltaPercents);
+				logIfDebug("===== Full Deltas =====");
+				logIfDebug(deltaObjs)
 
 				logIfDebug("===== MOMENTUM OUTPUT =====");
 
