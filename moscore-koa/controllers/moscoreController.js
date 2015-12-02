@@ -66,7 +66,7 @@ var render = views(__dirname + '/../views', {
 
 module.exports.home = function *home() {
 
-	var stocks = yield Promise.resolve(getStocks());
+	var stocks = yield getStocks();
 	stocks.sort((a, b) => b.score - a.score);
 
 	//console.log("PROCESSING");
