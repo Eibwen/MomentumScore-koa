@@ -3,6 +3,24 @@
     width: 60px;
 }
 
-tr[data-favorite='true'] {
-  background-color: #eee;
+table {
+    border-collapse: collapse;
+}
+
+tr > td {
+    border-style: solid;
+    border-color: transparent;
+    padding: 0 0.5em;
+}
+tr[data-favorite='true'] > td {
+    border-color: #eee;
+    background-color: #eee;
+}
+
+.moscorePercent {
+    text-align: right;
+    border-color: #eee;
+}
+.percent {
+    text-align: right;
 }

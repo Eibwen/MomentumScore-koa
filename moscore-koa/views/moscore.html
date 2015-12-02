@@ -7,6 +7,9 @@
   <script language="javascript" src="scripts/jspark.js"></script>
 
   <script language="javascript" src="scripts/moscoreFavorites.js"></script>
+
+  <link rel="stylesheet" href="fonts/style.css"></head>
+  <link rel="stylesheet" href="fonts/customstyles.css"></head>
 {% endblock %}
 
 {% block content %}
@@ -23,9 +26,14 @@
   	<thead>
   		<tr>
             <td><!-- checkbox --></td>
-  			{% for key in stockFields %}
+<!--   			{% for key in stockFields %}
   			<td>{{ key }}</td>
-  			{% endfor %}
+  			{% endfor %} -->
+            <td>Ticker</td>
+            <td>Score</td>
+            <td>Estimated<br/>Rate of Return</td>
+            <td>Avg Delta<br/>old -- new</td>
+            <td>Name</td>
   		</tr>
   	</thead>
   	<tbody>
@@ -42,9 +50,12 @@
 			<td class="tickerSymbol">
 				{{ stock.ticker }}
 			</td>
-			<td style="background-color:{{ stock.score|colorize(minScore, maxScore) }}">
+			<td class="moscorePercent" style="background-color:{{ stock.score|colorize(minScore, maxScore) }}">
 				{{ stock.score|percent }}
 			</td>
+            <td class="percent">
+                {{ (stock.score / 3.5)|percent }}
+            </td>
 			<td>
 				<span class="sparkline">{{ stock.deltas }}</span>
 			</td>

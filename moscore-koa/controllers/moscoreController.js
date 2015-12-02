@@ -72,12 +72,12 @@ module.exports.home = function *home() {
 	//console.log("PROCESSING");
 	//console.log(stocks);
 
-	console.log(Object.keys(stocks[0]));
-	var columnLabels = ["Ticker", "Score", "Spark Line", "Name"];
+	//console.log(Object.keys(stocks[0]));
+	//var columnLabels = ["Ticker", "Score", "Spark Line", "Name"];
   
 	this.body = yield render('moscore', {
 		'stocks': stocks,
-		'stockFields': columnLabels,
+		//'stockFields': columnLabels,
         'maxScore': stocks[0].score,
         'minScore': stocks[stocks.length-1].score
 	});
