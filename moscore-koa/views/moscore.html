@@ -8,6 +8,9 @@
 
   <script language="javascript" src="scripts/moscoreFavorites.js"></script>
 
+  <script language="javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script language="javascript" src="scripts/moscoreNotes.js"></script>
+
   <link rel="stylesheet" href="fonts/style.css"></head>
   <link rel="stylesheet" href="fonts/customstyles.css"></head>
 {% endblock %}
@@ -29,6 +32,7 @@
 <!--   			{% for key in stockFields %}
   			<td>{{ key }}</td>
   			{% endfor %} -->
+            <td><!-- notes column --></td>
             <td>Ticker</td>
             <td>Score</td>
             <td>Estimated<br/>Rate of Return</td>
@@ -47,8 +51,11 @@
             <td>
                 <input type="checkbox" class="moscore_toggle" />
             </td>
+            <td class="notesHolder" data-ticker="{{ stock.ticker }}">
+
+            </td>
 			<td class="tickerSymbol">
-				{{ stock.ticker }}
+				<div class="tickerIdentifier">{{ stock.ticker }}</div>
 			</td>
 			<td class="moscorePercent" style="background-color:{{ stock.score|colorize(minScore, maxScore) }}">
 				{{ stock.score|percent }}

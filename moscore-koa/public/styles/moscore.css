@@ -24,3 +24,33 @@ tr[data-favorite='true'] > td {
 .percent {
     text-align: right;
 }
+
+/* For moscoreNotes.js */
+.smallerIcon {
+    font-size:0.8em;
+}
+
+.input {
+    /*margin-top: 5px;*/
+    max-width: 100px;
+    margin-left: .25em;
+}
+.input:active,
+.input:focus {
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    background-color: white;
+    background-color: -moz-field;
+    border: 1px solid darkgray;
+    box-shadow: 1px 1px 1px 0 lightgray inset;
+    margin-top: 5px;
+    padding: 0 3px;
+
+    font-size: 0.9em;
+    max-width: 98px;
+}
+.notes {
+    color:#999;
+
+}
+/* For moscoreNotes.js */
